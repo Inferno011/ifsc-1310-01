@@ -1,6 +1,8 @@
 /*---------------- css-demo -----------------*/
 
 /*  ---- Color Scheme ---- */
+   /* --------- #1F1647 Darker-------*/
+   /* --------- #9F8CF5 Lighter ------*/
 
 /*  ---------------Box Sizing-----------------  */
 
@@ -14,7 +16,7 @@ html {
   }
 
 body{
-    font
+  font-family: "Roboto", sans-serif;
 }
 
 main{}
@@ -23,5 +25,5 @@ header.primary{
     background-color: #3b638b;
     color: #ffffff;
     text-align: center;
-    text-shadow:2px 2px #000000;
+    text-shadow:1px 1px #000000;
 }
