@@ -65,3 +65,14 @@ header.primary nav ul li a:hover{
 
 
 }
+
+/*----- Checking for high density phone displays -----*/
+@media screen and (min-resolution: 2dppx) {
+    header.primary nav ul{
+        flex-direction:column;
+        gap:10px;
+        max-width:200px;
+        margin:10px auto;
+      }
+
+}
