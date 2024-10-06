@@ -1,3 +1,67 @@
+/*---Home Page---*/
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
 body{
-    background-color:#9F8CF5;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    margin:0;
+    color: #ffffff;
+    background-color:#1F1647;
+}
+
+a{
+    color: red;
+}
+/*----- header -----*/
+
+header.primary{
+    text-align: center;
+}
+
+header.primary nav ul{
+    Display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+header.primary nav ul li{
+    list-style-type: none;
+}
+
+header.primary nav ul li a{
+    text-decoration: none;
+    border:1px solid #c0c0c0;
+    padding: 5px;
+    background-color: rgba(0,0,0,.40);
+    border-radius: 10px;
+
+    display: flex; /* Make the link itself a flexbox container */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    height: 20px; /* Set a fixed height for all boxes */
+    min-width: 200px; /* Ensure minimum width for smaller texts */
+}
+
+header.primary nav ul li a:hover{
+    color:#ffffff;
+}
+
+/*--- Media Queries ---*/
+@media screen and (max-width: 608px){
+    header.primary nav ul{
+        flex-direction:column;
+        gap:10px;
+        max-width:200px;
+        margin:10px auto;
+      }
+
+
 }
