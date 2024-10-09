@@ -1,12 +1,12 @@
 /*---Home Page---*/
 html {
     box-sizing: border-box;
-  }
-  *,
-  *:before,
-  *:after {
+}
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
+}
 
 body{
     font-family: "Roboto", sans-serif;
@@ -19,14 +19,14 @@ body{
 a{
     color: red;
 }
-/*----- header -----*/
 
+/*----- header -----*/
 header.primary{
     text-align: center;
 }
 
 header.primary nav ul{
-    Display:flex;
+    display:flex;
     flex-direction:row;
     justify-content: space-evenly;
     padding: 0;
@@ -54,25 +54,45 @@ header.primary nav ul li a:hover{
     color:#ffffff;
 }
 
+/*--- article assignments ---*/
+article#assignments .post figure {
+    margin: 0;                /* Remove default margins */
+    padding: 0;               /* Remove default padding */
+    display: inline-block;     /* Keep it as inline-block for image fitting */
+    background-color: transparent;  /* Remove background color */
+}
+
+article#assignments .post img {
+    width: 300px;
+    height: auto; 
+    display: block;  /* Removes extra inline spacing */
+    transition: transform 0.3s ease; /* Smooth transition for hover scaling */
+    margin: 0 auto;  /* Center the image initially */
+    transform-origin: left center; /* Make the image expand to the right */
+}
+
+article#assignments .post img:hover {
+    transform: scale(2); /* Scales the image by 1.2 times on hover */
+}
+
+
+
 /*--- Media Queries ---*/
-@media screen and (max-width: 38em){
-    header.primary nav ul{
-        flex-direction:column;
-        gap:10px;
-        max-width:200px;
-        margin:10px auto;
-      }
-
-
+@media screen and (max-width: 38em) {
+    header.primary nav ul {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 200px;
+        margin: 10px auto;
+    }
 }
 
 /*----- Checking for high density phone displays -----*/
 @media screen and (min-resolution: 2dppx) {
-    header.primary nav ul{
-        flex-direction:column;
-        gap:10px;
-        max-width:200px;
-        margin:10px auto;
-      }
-
+    header.primary nav ul {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 200px;
+        margin: 10px auto;
+    }
 }
