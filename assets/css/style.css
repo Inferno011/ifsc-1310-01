@@ -95,4 +95,8 @@ article#assignments .post img:hover {
         max-width: 200px;
         margin: 10px auto;
     }
+
+    header.primary nav ul li a {
+        height: 1.2em;
+        font-size: 1.2em;
 }
