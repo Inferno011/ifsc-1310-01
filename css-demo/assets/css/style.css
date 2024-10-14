@@ -183,16 +183,20 @@ aside[role="complementary"]{
 
 /*--- Media Queries ---*/
 
-@media screen and (max-width: 489px){
-
-  header.primary nav ul{
-    flex-direction:column;
-    gap:10px;
-    max-width:200px;
-    margin:10px auto;
+@media screen and (max-width: 560px) {
+  header.primary nav ul {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px;
+    margin: 10px auto;
   }
+  header.primary nav a {
+    display: block;
+  }
+}
 
-    header.primary nav a {
-      display:block;
-    }
+@media screen and (max-width: 420px) {
+  #blog {
+  flex-direction: column;
+}
 }
