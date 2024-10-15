@@ -11,10 +11,17 @@ html {
   /*---  Utility Classes ---*/
 
   .container{
-    width:80vw;
-    max-width: 960px; ;
+    width:95vw;
+    max-width: 1200px; ;
     margin:40px auto;
-  }
+   }
+
+    .spacer{
+        border-bottom:2px solid #FFA07A;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
   /*--------global------------*/
 body{
     font-family: "Roboto", sans-serif;
@@ -65,15 +72,31 @@ header.primary nav ul li a:hover{
     color:#ffffff;
 }
 
+
+/*---- projects ----*/
+
+#projects h2{
+    text-align: center;
+    border-bottom:2px solid #FFA07A;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
 /*--- article assignments ---*/
-article#assignments .post figure {
+article#assignments h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+article#assignments .gallary figure {
     margin: 0;                /* Remove default margins */
     padding: 0;               /* Remove default padding */
     display: inline-block;     /* Keep it as inline-block for image fitting */
     background-color: transparent;  /* Remove background color */
 }
 
-article#assignments .post img {
+article#assignments .gallary img {
     width: 300px;
     height: auto; 
     display: block;  /* Removes extra inline spacing */
@@ -82,7 +105,7 @@ article#assignments .post img {
     transform-origin: left center; /* Make the image expand to the right */
 }
 
-article#assignments .post img:hover {
+article#assignments .gallary img:hover {
     transform: scale(2); /* Scales the image by 1.2 times on hover */
 }
 
