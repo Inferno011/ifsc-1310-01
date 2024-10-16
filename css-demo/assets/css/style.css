@@ -28,7 +28,7 @@ img{
 
   .container{
     width:80vw;
-    max-width: 960px; ;
+    max-width: 1920px; ;
     margin:40px auto;
   }
 
@@ -70,8 +70,21 @@ body{
 main{}
 
 header.primary{
-  background-color: #3b638b;
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='20' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23172635' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M8 0v20L0 10M16 0v10L8 0M16 10v10H8'/%3E%3C/g%3E%3C/svg%3E");
+  --s: 12px; /* control the size*/
+  --c1: #465959;
+  --c2: #465959;
+  --c3: #3f59d8;
+  --_g: 0 120deg,#0000 0;
+  background: 
+    conic-gradient(at calc(250% / 3) calc(100% / 3), var(--c3) var(--_g)),
+    conic-gradient(from -120deg at calc(50% / 3) calc(100% / 3), var(--c2) var(--_g)),
+    conic-gradient(from 120deg at calc(100% / 3) calc(250% / 3), var(--c1) var(--_g)),
+    conic-gradient(from 120deg at calc(200% / 3) calc(250% / 3), var(--c1) var(--_g)),
+    conic-gradient(from -180deg at calc(100% / 3) 50%, var(--c2) 60deg, var(--c1) var(--_g)),
+    conic-gradient(from 60deg at calc(200% / 3) 50%, var(--c1) 60deg, var(--c3) var(--_g)),
+    conic-gradient(from -60deg at 50% calc(100% / 3), var(--c1) 120deg, var(--c2) 0 240deg, var(--c3) 0);
+  
+  background-size: calc(var(--s) * sqrt(3)) var(--s);
     color: #ffffff;
     text-align: center;
     text-shadow: 1px 1px #000000;
@@ -189,7 +202,7 @@ header.primary nav ul li a:hover{
 }
 
 #practice h3{
-  border-left:5px solid #3b638b;
+  border-left:5px solid #465959;
   padding:5px 0 5px 10px;
 }
 
@@ -206,10 +219,6 @@ caption{
   font-size:1.5rem;
 }
 
-thead{
-
-}
-
 tr:nth-child(even){
   background-color: rgba(0,0,0, .1);
 }
@@ -219,7 +228,7 @@ tr:hover{
 }
 
 th{
-  background-color: #172635;
+  background-color: #465959;
   color:#ffffff;
   padding:7.5px;
 }
@@ -259,7 +268,7 @@ dd + dt{
   padding: 20px 40px;
   margin: 40px 80px;
   border-radius: 30px 0;
-  background-color: #3b638b;
+  background-color: #D9913D;
   color: #ffffff;
   line-height: 1.4;
   text-shadow: 1px 1px #000;
@@ -274,7 +283,7 @@ dd + dt{
 
 
 aside[role="complementary"]{
-  background-color: #172635;
+  background-color: #465959;
   color:#ffffff;
   padding:40px 0;  
   }
@@ -301,8 +310,21 @@ aside[role="complementary"]{
   }
   
   #colophon{
-    background-color: #3b638b;
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='20' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23172635' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M8 0v20L0 10M16 0v10L8 0M16 10v10H8'/%3E%3C/g%3E%3C/svg%3E");
+    --s: 12px; /* control the size*/
+    --c1: #465959;
+    --c2: #465959;
+    --c3: #3f59d8;
+    --_g: 0 120deg,#0000 0;
+    background: 
+      conic-gradient(at calc(250% / 3) calc(100% / 3), var(--c3) var(--_g)),
+      conic-gradient(from -120deg at calc(50% / 3) calc(100% / 3), var(--c2) var(--_g)),
+      conic-gradient(from 120deg at calc(100% / 3) calc(250% / 3), var(--c1) var(--_g)),
+      conic-gradient(from 120deg at calc(200% / 3) calc(250% / 3), var(--c1) var(--_g)),
+      conic-gradient(from -180deg at calc(100% / 3) 50%, var(--c2) 60deg, var(--c1) var(--_g)),
+      conic-gradient(from 60deg at calc(200% / 3) 50%, var(--c1) 60deg, var(--c3) var(--_g)),
+      conic-gradient(from -60deg at 50% calc(100% / 3), var(--c1) 120deg, var(--c2) 0 240deg, var(--c3) 0);
+    
+    background-size: calc(var(--s) * sqrt(3)) var(--s);
     padding:5px;
     color:#ffffff;
     font-size:1.2rem;
