@@ -221,6 +221,8 @@ body {
     .large-picture-1, .large-picture-2, .article-1, .article-2, .article-3, .article-4 {
         grid-column: 1 / -1; /* Span the entire column */
         grid-row: auto; /* Let items stack naturally */
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     /* Adjust spacing and layout of article cards */
