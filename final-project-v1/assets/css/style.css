@@ -60,6 +60,21 @@ body {
     border-radius: 15px;
     text-decoration: none;
 }
+
+/* Hamburger menu stuff */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
 /*-----------------------------------------------------------------*/
 
 /* Grid Container */
@@ -129,7 +144,7 @@ body {
 /* Image Placeholder in Article */
 .image-placeholder {
     background-color: #a16767;
-    padding: 40px;
+    padding: 200px;
     width: 100%;
     text-align: center;
     color: #ffffff;
@@ -216,5 +231,27 @@ body {
     /* Hide large-picture-2 */
     .large-picture-2 {
             display: none;
+    }
+}
+
+/*-------- Hamburger Menu Stuff -------------------*/
+@media (max-width: 767px) {
+    .navigation {
+        display: none; /* Hide navigation links */
+        flex-direction: column; /* Stacked layout for when it's shown */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #2a2d3b;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navigation.active {
+        display: flex; /* Show links when menu is open */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on smaller screens */
     }
 }
