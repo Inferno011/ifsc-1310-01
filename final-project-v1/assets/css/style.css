@@ -1,3 +1,11 @@
+/*------color shiz----*/
+
+/*       #1a1c2c     */
+/*       #a584e0     */
+
+
+
+/*--------------------Mass Styling------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -5,23 +13,25 @@
 }
 
 body {
-    background-color: #1a1c2c;
+    background-color: black;
     color: #ffffff;
     font-family: Arial, sans-serif;
 }
-/* UTILITY */
+/*--------------------------------------------------------------*/
+/*------------------------- UTILITY---------------------------- */
 .rounded-image {
     width: 100%;             /* Make the image take up the full width of the container */
     height: auto;            /* Maintain aspect ratio */
     border-radius: 20px;     /* Apply rounded corners to the image */
     object-fit: cover;       /* Ensure the image covers the container */
 }
-/*--------------------------------------*/
+/*--------------------------------------------------------------------*/
 
-/* Navigation Bar */
+/*----------------------- Navigation Bar ----------------------------*/
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: #2a2d3b;
 }
@@ -29,6 +39,17 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
+}
+
+.logo svg {
+    height: 40px; /* Adjust as needed */
+    width: auto;  /* Maintain aspect ratio */
+    fill: #ffffff; /* Set the fill color */
+}
+
+.navigation {
+    display: flex;
+    gap: 10px; /* Adds space between the links */
 }
 
 .navigation a {
@@ -39,6 +60,7 @@ body {
     border-radius: 15px;
     text-decoration: none;
 }
+/*-----------------------------------------------------------------*/
 
 /* Grid Container */
 .container {
@@ -76,7 +98,7 @@ body {
 
 /* Article Cards - Image and Summary in Rounded Box */
 .article-1, .article-2, .article-3, .article-4 {
-    background-color: #a584e0;
+    background-color: #1a1c2c;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -115,14 +137,14 @@ body {
 
 /* Article Summary */
 .summary {
-    background-color: #a584e0;
+    background-color: #1a1c2c;
     padding: 15px;
     text-align: center;
     width: 100%;
-    color: #333;
+    color: white
 }
 
-/*STAR ANIMATION STUFF*/
+/*----------------------STAR ANIMATION STUFF--------------------------*/
 
 .star {
     position: absolute;
@@ -143,9 +165,7 @@ body {
     pointer-events: none; /* Prevents it from blocking other elements */
     overflow: hidden;
 }
-
-
-  
+ 
 /* Animation for the stars falling */
 @keyframes fall {
     0% {
@@ -160,11 +180,19 @@ body {
       opacity: 0;
     }
   }
-  
-  
-  /*--------------------*/
+  /*---------------------------------------------------------------*/
 
-/* MEDIA QUERIES*/
+  footer{
+    background-color: #2a2d3b;
+    padding: 70px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 70px;
+    width: 100%;
+  }
+
+/*------------------------MEDIA QUERIES-----------------------------*/
 
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 1007px) {
