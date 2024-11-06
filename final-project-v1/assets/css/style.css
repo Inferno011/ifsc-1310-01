@@ -237,7 +237,7 @@ body {
 }
 
 /*-------- Hamburger Menu Stuff -------------------*/
-@media (max-width: 767px) {
+@media (max-width: 791px) {
     .navigation {
         display: none; /* Hide navigation links */
         flex-direction: column; /* Stacked layout for when it's shown */
