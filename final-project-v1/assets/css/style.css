@@ -254,6 +254,7 @@ body {
 
 /*------------------------MEDIA QUERIES-----------------------------*/
 
+            /*----------Main Menu Page----------*/
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 1007px) {
     /* Make the container a single-column layout */
@@ -279,7 +280,29 @@ body {
     .large-picture-2 {
             display: none;
     }
+
+            /*----------Articles Page----------*/
+    #articles .container {
+        grid-template-columns: 1fr; /* Single-column layout */
+        grid-template-rows: auto;
+    }
+        
+    /* Ensure each article spans the full width in the single-column layout */
+    #articles .article-1, #articles .article-2, #articles .article-3, #articles .article-4 {
+        grid-column: 1 / -1; /* Span the full column */
+        grid-row: auto; /* Stack items naturally */
+        max-width: 400px; /* Optional max width */
+        margin: 0 auto; /* Center align */
+    }
+        
+            /* Add spacing between articles */
+    #articles .article-1, #articles .article-2, #articles .article-3, #articles .article-4 {
+        margin-bottom: 20px; /* Space between items */
+    }
+
+
 }
+
 
 /*-------- Hamburger Menu Stuff -------------------*/
 @media (max-width: 791px) {
