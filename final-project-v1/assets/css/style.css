@@ -77,6 +77,8 @@ body {
 }
 /*-----------------------------------------------------------------*/
 
+/*---------- Grid Creation ----------*/
+
 /* Grid Container */
 .container {
     display: grid;
@@ -89,17 +91,7 @@ body {
 }
 
 
-/* Large Pictures - Centered and Offset */
-.large-picture-1, .large-picture-2 {
-    background-color: #cc7b7b;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: #ffffff;
-}
-
+/*------- grid placement main ------------*/
 .large-picture-1 {
     grid-column: 4 / span 6;
     grid-row: 2 / span 6;
@@ -109,16 +101,6 @@ body {
 .large-picture-2 {
     grid-column: 4 / span 6;
     grid-row: 8 / span 4;
-}
-
-/* Article Cards - Image and Summary in Rounded Box */
-.article-1, .article-2, .article-3, .article-4 {
-    background-color: #1a1c2c;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
 }
 
 .article-1 {
@@ -140,6 +122,68 @@ body {
     grid-column: 10 / span 3;
     grid-row: 8 / span 5; /* Positioned lower to avoid overlapping */
 }
+                 /*----- articles page -----*/
+
+#articles .container {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(12, minmax(100px, auto)); /* Minimum height per row */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Set the max width of the container */
+    margin: 0 auto;    /* Center the container horizontally */
+}
+
+                
+#articles .article-1 {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 5; /* Increased height */
+}
+
+#articles .article-2 {
+    grid-column: 5 / span 3;
+    grid-row: 3 / span 5; /* Increased height */
+}
+
+#articles .article-3 {
+    grid-column: 9 / span 3;
+    grid-row: 3 / span 5; /* Positioned lower to avoid overlapping */
+}
+
+#articles .article-4 {
+    grid-column: 5 / span 3;
+    grid-row: 8 / span 5; /* Positioned lower to avoid overlapping */
+}
+
+/*-----------------------------------------------------*/
+
+/*----------- artical styling ------------*/
+
+/* Large Pictures - Centered and Offset */
+.large-picture-1, .large-picture-2 {
+    background-color: #cc7b7b;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Article Cards - Image and Summary in Rounded Box */
+.article-1, .article-2, .article-3, .article-4 {
+    background-color: #1a1c2c;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/*---------- Hover effect ----------*/
+.article-1:hover, .article-2:hover, .article-3:hover, .article-4:hover {
+    transform: scale(1.02);
+}
 
 /* Image Placeholder in Article */
 .image-placeholder {
@@ -158,6 +202,7 @@ body {
     width: 100%;
     color: white
 }
+/*-------------------------------------------------------------*/
 
 /*----------------------STAR ANIMATION STUFF--------------------------*/
 
