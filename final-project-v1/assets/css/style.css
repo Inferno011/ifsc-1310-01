@@ -122,6 +122,18 @@ body {
     grid-column: 10 / span 3;
     grid-row: 8 / span 5; /* Positioned lower to avoid overlapping */
 }
+
+/*---------- full article pages ----------*/
+
+.article-full {
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 2;
+}
+
+.article-section-title {
+    margin-top: 35px;
+}
+
                  /*----- articles page -----*/
 
 #articles .container {
@@ -171,7 +183,7 @@ body {
 }
 
 /* Article Cards - Image and Summary in Rounded Box */
-.article-1, .article-2, .article-3, .article-4 {
+.article-1, .article-2, .article-3, .article-4, .article-full {
     background-color: #1a1c2c;
     border-radius: 20px;
     display: flex;
