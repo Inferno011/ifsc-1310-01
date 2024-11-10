@@ -127,12 +127,30 @@ body {
 
 .article-full {
     grid-column: 1 / span 12;
-    grid-row: 2 / span 2;
+    grid-row: 2 / span 6;
 }
 
 .article-section-title {
     margin-top: 35px;
 }
+
+/* Add spacing between list items and paragraphs within the "Configurations" section */
+/* Add spacing between list items and paragraphs within the "Configurations" section in .article-full */
+.article-full ul {
+    list-style: none;
+    padding: 0;
+}
+
+.article-full ul li {
+    margin-bottom: 20px; /* Space between each list item */
+}
+
+.article-full ul li p {
+    margin-top: 10px; /* Space between title and each paragraph within the list item */
+    margin-bottom: 10px; /* Space between paragraphs within the list item */
+}
+
+
 
                  /*----- articles page -----*/
 
@@ -190,6 +208,18 @@ body {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    text-decoration: none;
+}
+
+.summary h2{
+    font-size: 15px; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: Keeps the text bold */ 
+}
+
+.summary p {
+    font-size: 15px;     
 }
 
 /*---------- Hover effect ----------*/
