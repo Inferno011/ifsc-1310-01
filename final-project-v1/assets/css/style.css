@@ -378,6 +378,30 @@ body {
     }
 
 
+    /* artical page stuff */
+    #article-1 .config-section {
+        display: flex;             /* Switch to flex for vertical stacking */
+        flex-direction: column;    /* Stack content vertically */
+        align-items: center;       /* Center items horizontally */
+        gap: 10px;                 /* Add space between image and text */
+        padding: 10px;             /* Adjust padding for smaller screens */
+    }
+
+    #article-1 .config-section .image-content {
+        order: -1;                 /* Ensure image is on top */
+        width: 100%;               /* Make the image responsive */
+        text-align: center;        /* Center-align image content */
+    }
+
+    #article-1 .config-section .image-content img {
+        width: 100%;               /* Image takes full width */
+        height: auto;              /* Maintain aspect ratio */
+    }
+
+    #article-1 .config-section .text-content {
+        text-align: center;        /* Center-align text */
+        padding: 0 10px;           /* Add horizontal padding for readability */
+    }
 }
 
 
