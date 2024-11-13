@@ -21,6 +21,13 @@ body {
 /*------------------------- UTILITY---------------------------- */
 .rounded-image {
     width: 100%;             /* Make the image take up the full width of the container */
+    height: 400px;            /* Maintain aspect ratio */
+    border-radius: 20px;     /* Apply rounded corners to the image */
+    object-fit: cover;       /* Ensure the image covers the container */
+}
+
+.rounded-image-full {
+    width: 100%;             /* Make the image take up the full width of the container */
     height: auto;            /* Maintain aspect ratio */
     border-radius: 20px;     /* Apply rounded corners to the image */
     object-fit: cover;       /* Ensure the image covers the container */
