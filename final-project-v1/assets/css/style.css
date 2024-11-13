@@ -183,6 +183,10 @@ body {
     text-align: center; /* Center text within this section */
 }
 
+.article-section-title {
+    padding-bottom: 10px;
+}
+
 
 
 
