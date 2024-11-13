@@ -281,6 +281,44 @@ body {
 }
 /*-------------------------------------------------------------*/
 
+/*---------------------- Generic table styling ---------------*/
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1c2c;
+    border-radius: 15px;
+    overflow: hidden;
+    color: #ffffff;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.table thead th {
+    background-color: #2a2d3b;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.table tbody tr {
+    background-color: #1a1c2c;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #2a2d3b;
+}
+
+.table td, .table th {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Hover effect */
+.table tbody tr:hover {
+    background-color: #333;
+}
+
 /*----------------------STAR ANIMATION STUFF--------------------------*/
 
 .star {
@@ -317,6 +355,8 @@ body {
       opacity: 0;
     }
   }
+
+  
   /*---------------------------------------------------------------*/
 
   footer{
@@ -358,7 +398,7 @@ body {
             display: none;
     }
 
-            /*----------Articles Page----------*/
+            /*---------- Main Articles Page----------*/
     #articles .container {
         grid-template-columns: 1fr; /* Single-column layout */
         grid-template-rows: auto;
@@ -378,7 +418,7 @@ body {
     }
 
 
-    /* artical page stuff */
+    /* actual artical page stuff */
     #article-1 .config-section {
         display: flex;             /* Switch to flex for vertical stacking */
         flex-direction: column;    /* Stack content vertically */
@@ -425,4 +465,47 @@ body {
     .hamburger {
         display: flex; /* Show hamburger on smaller screens */
     }
+
+}
+
+
+@media (max-width: 576px) {
+/*---------------Table stuff-----Maybe remove---------------*/
+.table {
+    border: none; /* Remove table borders for a cleaner look */
+}
+
+.table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+}
+
+.table tr {
+    margin-bottom: 15px; /* Add space between each "card" */
+    background-color: #2a2d3b;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    text-align: left;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.table td::before {
+    content: attr(data-label); /* Adds label to each cell */
+    font-weight: bold;
+    color: #a584e0;
+    flex: 0 0 50%; /* Allocates space for labels */
+    text-align: left;
+}
+
+/* Hide the header */
+.table thead {
+    display: none;
+}
 }
