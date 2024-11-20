@@ -17,6 +17,7 @@ body {
     color: #ffffff;
     font-family: Arial, sans-serif;
 }
+
 /*--------------------------------------------------------------*/
 /*------------------------- UTILITY---------------------------- */
 .rounded-image {
@@ -90,7 +91,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, minmax(100px, auto)); /* Minimum height per row */
+    grid-template-rows: auto;
     gap: 20px;
     padding: 20px;
     max-width: 1200px; /* Set the max width of the container */
@@ -101,7 +102,7 @@ body {
 /*------- grid placement main ------------*/
 .large-picture-1 {
     grid-column: 4 / span 6;
-    grid-row: 2 / span 6;
+    grid-row: 5 / span 6;
     overflow: hidden;
 }
 
