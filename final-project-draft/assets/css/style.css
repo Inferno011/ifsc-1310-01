@@ -1,0 +1,566 @@
+/*------color shiz----*/
+
+/*       #1a1c2c     */
+/*       #a584e0     */
+
+
+
+/*--------------------Mass Styling------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/*--------------------------------------------------------------*/
+/*------------------------- UTILITY---------------------------- */
+.rounded-image {
+    width: 100%;             /* Make the image take up the full width of the container */
+    height: 400px;            /* Maintain aspect ratio */
+    border-radius: 20px;     /* Apply rounded corners to the image */
+    object-fit: cover;       /* Ensure the image covers the container */
+}
+
+.rounded-image-full {
+    width: 100%;             /* Make the image take up the full width of the container */
+    height: 750px;            /* Maintain aspect ratio */
+    border-radius: 20px;     /* Apply rounded corners to the image */
+    object-fit: cover;       /* Ensure the image covers the container */
+}
+/*--------------------------------------------------------------------*/
+
+/*----------------------- Navigation Bar ----------------------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2a2d3b;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo svg {
+    height: 40px; /* Adjust as needed */
+    width: auto;  /* Maintain aspect ratio */
+    fill: #ffffff; /* Set the fill color */
+}
+
+.navigation {
+    display: flex;
+    gap: 10px; /* Adds space between the links */
+}
+
+.navigation a {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+/* Hamburger menu stuff */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+/*-----------------------------------------------------------------*/
+
+/*---------- Grid Creation ----------*/
+
+/* Grid Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Set the max width of the container */
+    margin: 0 auto;    /* Center the container horizontally */
+}
+
+
+/*------- grid placement main ------------*/
+.large-picture-1 {
+    grid-column: 4 / span 6;
+    grid-row: 5 / span 6;
+    overflow: hidden;
+}
+
+.large-picture-2 {
+    grid-column: 4 / span 6;
+    grid-row: 8 / span 4;
+}
+
+.article-1 {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 5; /* Increased height */
+}
+
+.article-2 {
+    grid-column: 10 / span 3;
+    grid-row: 3 / span 5; /* Increased height */
+}
+
+.article-3 {
+    grid-column: 1 / span 3;
+    grid-row: 8 / span 5; /* Positioned lower to avoid overlapping */
+}
+
+.article-4 {
+    grid-column: 10 / span 3;
+    grid-row: 8 / span 5; /* Positioned lower to avoid overlapping */
+}
+
+/*---------- full article pages ----------*/
+
+/* Container grid setup */
+#article-1 .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Adjusted config-section to give more space to the image */
+#article-1 .config-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Smaller area for text, larger for image */
+    background-color: #1a1c2c;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+    align-items: start; /* Align items at the top */
+}
+
+/* Text content styling */
+#article-1 .config-section .text-content {
+    color: #ffffff;
+    width: 100%;
+    white-space: normal; /* Allow text wrapping */
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+#article-1 .config-section .text-content p {
+    margin-bottom: 15px; /* Add space between each paragraph */
+}
+
+/* Image content styling */
+#article-1 .config-section .image-content {
+    text-align: center;
+    margin: auto;
+}
+
+#article-1 .config-section .image-content img {
+    width: 300px; /* Adjust image size as needed */
+    height: auto;
+    border-radius: 10px;
+}
+
+#article-1 .overview-section .text-content {
+    text-align: center;
+}
+
+#article-1 .overview-section {
+    display: block; /* Override grid layout */
+    background-color: #1a1c2c;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; /* Center text within this section */
+}
+
+.article-section-title {
+    padding-bottom: 10px;
+}
+
+
+
+
+
+                 /*----- articles page -----*/
+
+#articles .container {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(12, minmax(100px, auto)); /* Minimum height per row */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Set the max width of the container */
+    margin: 0 auto;    /* Center the container horizontally */
+}
+
+                
+#articles .article-1 {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 5; /* Increased height */
+}
+
+#articles .article-2 {
+    grid-column: 5 / span 3;
+    grid-row: 3 / span 5; /* Increased height */
+}
+
+#articles .article-3 {
+    grid-column: 9 / span 3;
+    grid-row: 3 / span 5; /* Positioned lower to avoid overlapping */
+}
+
+#articles .article-4 {
+    grid-column: 5 / span 3;
+    grid-row: 8 / span 5; /* Positioned lower to avoid overlapping */
+}
+
+/*-----------------------------------------------------*/
+
+/*----------- artical summary styling ------------*/
+
+/* Large Pictures - Centered and Offset */
+.large-picture-1, .large-picture-2 {
+    background-color: #cc7b7b;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Article Cards - Image and Summary in Rounded Box */
+.article-1, .article-2, .article-3, .article-4, .article-full {
+    background-color: #1a1c2c;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    text-decoration: none;
+}
+
+.summary h2{
+    font-size: 15px; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: Keeps the text bold */ 
+}
+
+.summary p {
+    font-size: 15px;     
+}
+
+/*---------- Hover effect ----------*/
+.article-1:hover, .article-2:hover, .article-3:hover, .article-4:hover {
+    transform: scale(1.02);
+}
+
+/* Image Placeholder in Article */
+.image-placeholder {
+    background-color: #a16767;
+    padding: 200px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Article Summary */
+.summary {
+    background-color: #1a1c2c;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    color: white
+}
+/*-------------------------------------------------------------*/
+
+/*---------------------- Generic table styling ---------------*/
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1c2c;
+    border-radius: 15px;
+    overflow: hidden;
+    color: #ffffff;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.table thead th {
+    background-color: #2a2d3b;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.table tbody tr {
+    background-color: #1a1c2c;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #2a2d3b;
+}
+
+.table td, .table th {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Hover effect */
+.table tbody tr:hover {
+    background-color: #333;
+}
+
+/*-------------------------form stuff ---------------------------------*/
+
+.contact-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1c2c; /* Match theme */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 500px; /* Ensures it has a visible size */
+    width: 100%; /* Stretches to fit the container */
+}
+
+.contact-form-section .form-container {
+    background-color: #2a2d3b; /* Differentiates the container */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px; /* Limit maximum width */
+    width: 100%; /* Stretches to container width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centers text inside */
+}
+
+.contact-form-section iframe, 
+.contact-form-section embed {
+    width: 100%; /* Ensures the embedded content scales */
+    max-width: 100%; /* Prevents overflow */
+    min-height: 400px; /* Provides consistent height */
+    border: none; /* Removes default borders */
+}
+
+
+
+
+
+
+/*----------------------STAR ANIMATION STUFF--------------------------*/
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: fall linear infinite;
+  }
+
+  .star-background {
+    position: fixed; /* Stays fixed in place as you scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Extend to cover the entire page */
+    z-index: -1; /* Behind all other content */
+    pointer-events: none; /* Prevents it from blocking other elements */
+    overflow: hidden;
+}
+ 
+/* Animation for the stars falling */
+@keyframes fall {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(var(--fall-distance));
+      opacity: 0;
+    }
+  }
+
+  
+  /*---------------------------------------------------------------*/
+
+  footer{
+    background-color: #2a2d3b;
+    padding: 70px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 70px;
+    width: 100%;
+  }
+
+/*------------------------MEDIA QUERIES-----------------------------*/
+
+            /*----------Main Menu Page----------*/
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 1007px) {
+    /* Make the container a single-column layout */
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* Ensure each item spans the full width of the single column */
+    .large-picture-1, .large-picture-2, .article-1, .article-2, .article-3, .article-4 {
+        grid-column: 1 / -1; /* Span the entire column */
+        grid-row: auto; /* Let items stack naturally */
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Adjust spacing and layout of article cards */
+    .article-1, .article-2, .article-3, .article-4, .large-picture-1, .large-picture-2 {
+        margin-bottom: 20px; /* Add some spacing between each item */
+    }
+
+    /* Hide large-picture-2 */
+    .large-picture-2 {
+            display: none;
+    }
+    .rounded-image {
+        width: 100%;             /* Make the image take up the full width of the container */
+        height: auto;            /* Maintain aspect ratio */
+        border-radius: 20px;     /* Apply rounded corners to the image */
+        object-fit: cover;       /* Ensure the image covers the container */
+    }
+
+            /*---------- Main Articles Page----------*/
+    #articles .container {
+        grid-template-columns: 1fr; /* Single-column layout */
+        grid-template-rows: auto;
+    }
+        
+    /* Ensure each article spans the full width in the single-column layout */
+    #articles .article-1, #articles .article-2, #articles .article-3, #articles .article-4 {
+        grid-column: 1 / -1; /* Span the full column */
+        grid-row: auto; /* Stack items naturally */
+        max-width: 400px; /* Optional max width */
+        margin: 0 auto; /* Center align */
+    }
+        
+            /* Add spacing between articles */
+    #articles .article-1, #articles .article-2, #articles .article-3, #articles .article-4 {
+        margin-bottom: 20px; /* Space between items */
+    }
+
+
+    /* actual artical page stuff */
+    #article-1 .config-section {
+        display: flex;             /* Switch to flex for vertical stacking */
+        flex-direction: column;    /* Stack content vertically */
+        align-items: center;       /* Center items horizontally */
+        gap: 10px;                 /* Add space between image and text */
+        padding: 10px;             /* Adjust padding for smaller screens */
+    }
+
+    #article-1 .config-section .image-content {
+        order: -1;                 /* Ensure image is on top */
+        width: 100%;               /* Make the image responsive */
+        text-align: center;        /* Center-align image content */
+    }
+
+    #article-1 .config-section .image-content img {
+        width: 100%;               /* Image takes full width */
+        height: auto;              /* Maintain aspect ratio */
+    }
+
+    #article-1 .config-section .text-content {
+        text-align: center;        /* Center-align text */
+        padding: 0 10px;           /* Add horizontal padding for readability */
+    }
+}
+
+
+/*-------- Hamburger Menu Stuff -------------------*/
+@media (max-width: 791px) {
+    .navigation {
+        display: none; /* Hide navigation links */
+        flex-direction: column; /* Stacked layout for when it's shown */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #2a2d3b;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navigation.active {
+        display: flex; /* Show links when menu is open */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on smaller screens */
+    }
+
+}
+
+
+@media (max-width: 576px) {
+/*---------------Table stuff-----Maybe remove---------------*/
+.table {
+    border: none; /* Remove table borders for a cleaner look */
+}
+
+.table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+}
+
+.table tr {
+    margin-bottom: 15px; /* Add space between each "card" */
+    background-color: #2a2d3b;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    text-align: left;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.table td::before {
+    content: attr(data-label); /* Adds label to each cell */
+    font-weight: bold;
+    color: #a584e0;
+    flex: 0 0 50%; /* Allocates space for labels */
+    text-align: left;
+}
+
+/* Hide the header */
+.table thead {
+    display: none;
+}
+}
